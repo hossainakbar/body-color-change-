@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <button>change color</button>
+    <h1>feni goverment college</h1>
+    <script>
+  var body = document.body;
+  function body_color () {
+    body.style.backgroundColor = `rgb(${parseInt(Math.random() * 255)}, ${parseInt(Math.random() * 255)}, ${parseInt(Math.random() * 255)})`;
+    body.style.color = '#fff';
+  }
+  var auto_background = setInterval(body_color, 500);
+  setTimeout(function () {
+    clearInterval(auto_background);
+  }, 100000)
+  body_color();
+  var button = document.querySelector('button');
+  button.addEventListener('click', body_color);
+    
+    </script>
+</body>
+</html>
